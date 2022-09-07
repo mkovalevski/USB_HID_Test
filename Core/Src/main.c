@@ -98,7 +98,7 @@ int main(void)
   {
     /* USER CODE END WHILE */
 	  if(HAL_GPIO_ReadPin(USER_Btn_GPIO_Port, USER_Btn_Pin)) {
-		  *tx_buffer = "Hello world!";
+		  sprintf(tx_buffer, "Hello world!");
 		  USBD_CUSTOM_HID_SendReport(&hUsbDeviceFS, tx_buffer, 64);
 
 	  }
